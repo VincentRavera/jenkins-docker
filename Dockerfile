@@ -3,9 +3,9 @@ FROM ubuntu:trusty
 LABEL maintainer Vincent RAVERA <ravera.vincent@gmail.com>
 
 # Install java
-COPY jre-8u161-linux-x64.tar.gz /opt/
-RUN cd /opt/; tar -zxvf jre-8u161-linux-x64.tar.gz
-ENV JAVA_HOME="/opt/jre1.8.0_161/"
+COPY jdk-8u171-linux-arm32-vfp-hflt.tar.gz /opt/
+RUN cd /opt/; tar -zxvf jdk-8u171-linux-arm32-vfp-hflt.tar.gz
+ENV JAVA_HOME="/opt/jdk1.8.0_171/"
 
 RUN apt-get update
 
