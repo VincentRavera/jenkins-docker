@@ -13,7 +13,7 @@ docker run --name jenkins -it -p 8088:8088 -p 50000:50000 -v /var/run/docker:/va
 ### Swarm
 
 ```shell
-docker stack deploy --compose-file docker-compose.yml registeryswarm
+docker stack deploy --compose-file docker-compose.yml jenkins-swarmed
 ```
 
 ### Docker-compose
@@ -21,9 +21,11 @@ docker stack deploy --compose-file docker-compose.yml registeryswarm
 ```shell
 docker-compose up
 ```
-## There is an official repository, why should i use this image ?
+## There is an official repository, why should I use this image ?
 
-I bought Raspberry pi's for swarm, but since pi architectures is arm, and are most of the time incompatible with
+I bought Raspberry pi's for swarm, but pi architectures is arm, and are most of the time incompatible with
 "normal" images.
-I can build this image and commit the arm version for myself (at least).
-The I use the arm jenkins version on a pi to rebuild images I need and commit them.
+Here, I can build this image and commit the arm version for myself (at least).
+Then I use the arm jenkins version on a pi to rebuild images I need, and commit them.
+
+(FYI)
